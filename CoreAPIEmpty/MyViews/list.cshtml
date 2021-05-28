@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CoreAPIEmpty.Models.Employee>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>List View Demo:List Employee details:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Dept</th>
+            </tr>
+       </thead>
+        <tbody>
+            @foreach (var emp in Model)
+            {
+            <tr>
+                <td>@emp.Name</td>
+                <td>@emp.Email</td>
+                <td>@emp.Dept</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

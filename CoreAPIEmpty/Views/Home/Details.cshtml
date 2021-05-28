@@ -1,0 +1,27 @@
+﻿@model CoreAPIEmpty.Models.Employee
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1> Inside Details cshtml file inside Views/Home</h1>
+    <div>
+        <h2>@ViewData["PageTitle"]:<small>Using ViewData</small></h2>
+        @{
+            var employee = ViewData["Employee"] as CoreAPIEmpty.Models.Employee;
+        }
+        <h3>Name:@employee.Name</h3>
+        <h3>Email:@employee.Email</h3>
+    </div>
+    <div>
+        <h2>@ViewBag.PageTitle:<small>Using ViewBag</small></h2>
+        <h3>Name:@ViewBag.Employee.Name</h3>
+        <h3>Email:@ViewBag.Employee.Email</h3>
+    </div>
+    <div>
+        <h1>Using Model Property</h1>
+        <h3>@Model.Name</h3>
+        <h3>@Model.Email</h3>
+    </div>
+</body>
+</html>

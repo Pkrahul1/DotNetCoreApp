@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CoreAPIEmpty.Models.Employee>
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";//~means root node
+    ViewBag.Title = "Employee Lsit using Layout View";
+}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Dept</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.Name</td>
+                    <td>@emp.Email.</td>
+                    <td>@emp.Dept</td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
+@section Scripts {
+<h2>This para is inside Script section</h2>
+}
+@* this view will be rendered in _layout view *@
